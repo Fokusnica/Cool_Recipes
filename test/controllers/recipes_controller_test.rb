@@ -18,7 +18,7 @@ class RecipesControllerTest < ActionController::TestCase
 
   test "should create recipe" do
     assert_difference('Recipe.count') do
-      post :create, recipe: { cooking_time: @recipe.cooking_time, cuisine_id: @recipe.cuisine_id, food_preference_id: @recipe.food_preference_id, food_type: @recipe.food_type, ingredients: @recipe.ingredients, level_of_difficulty: @recipe.level_of_difficulty, procedure: @recipe.procedure, servings: @recipe.servings, title: @recipe.title }
+      post :create, recipe: { cooking_time: @recipe.cooking_time, cuisine_id: @recipe.cuisine_id, difficulty_level: @recipe.difficulty_level, food_preference_id: @recipe.food_preference_id, food_type_id: @recipe.food_type_id, ingredients: @recipe.ingredients, procedure: @recipe.procedure, title: @recipe.title }
     end
 
     assert_redirected_to recipe_path(assigns(:recipe))
@@ -35,7 +35,7 @@ class RecipesControllerTest < ActionController::TestCase
   end
 
   test "should update recipe" do
-    patch :update, id: @recipe, recipe: { cooking_time: @recipe.cooking_time, cuisine_id: @recipe.cuisine_id, food_preference_id: @recipe.food_preference_id, food_type: @recipe.food_type, ingredients: @recipe.ingredients, level_of_difficulty: @recipe.level_of_difficulty, procedure: @recipe.procedure, servings: @recipe.servings, title: @recipe.title }
+    patch :update, id: @recipe, recipe: { cooking_time: @recipe.cooking_time, cuisine_id: @recipe.cuisine_id, difficulty_level: @recipe.difficulty_level, food_preference_id: @recipe.food_preference_id, food_type_id: @recipe.food_type_id, ingredients: @recipe.ingredients, procedure: @recipe.procedure, title: @recipe.title }
     assert_redirected_to recipe_path(assigns(:recipe))
   end
 
